@@ -253,7 +253,7 @@ try {
 ## `manageServiceGetList()`
 
 ```php
-manageServiceGetList(): \OpenAPI\Client\Model\ImageGetListResponse
+manageServiceGetList($offset, $limit, $filter, $sort): \OpenAPI\Client\Model\ImageGetListResponse
 ```
 
 
@@ -275,9 +275,13 @@ $apiInstance = new OpenAPI\Client\Api\ManageServiceApi(
     new GuzzleHttp\Client(),
     $config
 );
+$offset = 56; // int
+$limit = 56; // int
+$filter = 'filter_example'; // string
+$sort = 'sort_example'; // string
 
 try {
-    $result = $apiInstance->manageServiceGetList();
+    $result = $apiInstance->manageServiceGetList($offset, $limit, $filter, $sort);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ManageServiceApi->manageServiceGetList: ', $e->getMessage(), PHP_EOL;
@@ -286,7 +290,12 @@ try {
 
 ### Parameters
 
-This endpoint does not need any parameter.
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **offset** | **int**|  | [optional] |
+| **limit** | **int**|  | [optional] |
+| **filter** | **string**|  | [optional] |
+| **sort** | **string**|  | [optional] |
 
 ### Return type
 
