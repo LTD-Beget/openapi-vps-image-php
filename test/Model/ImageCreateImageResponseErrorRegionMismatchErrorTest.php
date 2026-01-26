@@ -1,6 +1,6 @@
 <?php
 /**
- * ImageRegionTest
+ * ImageCreateImageResponseErrorRegionMismatchErrorTest
  *
  * PHP version 7.4
  *
@@ -31,15 +31,15 @@ namespace OpenAPI\Client\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * ImageRegionTest Class Doc Comment
+ * ImageCreateImageResponseErrorRegionMismatchErrorTest Class Doc Comment
  *
  * @category    Class
- * @description ImageRegion
+ * @description ImageCreateImageResponseErrorRegionMismatchError
  * @package     OpenAPI\Client
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class ImageRegionTest extends TestCase
+class ImageCreateImageResponseErrorRegionMismatchErrorTest extends TestCase
 {
 
     /**
@@ -71,54 +71,27 @@ class ImageRegionTest extends TestCase
     }
 
     /**
-     * Test "ImageRegion"
+     * Test "ImageCreateImageResponseErrorRegionMismatchError"
      */
-    public function testImageRegion()
+    public function testImageCreateImageResponseErrorRegionMismatchError()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "vps_region"
      */
-    public function testPropertyId()
+    public function testPropertyVpsRegion()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "requested_region"
      */
-    public function testPropertyName()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "name_en"
-     */
-    public function testPropertyNameEn()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "country"
-     */
-    public function testPropertyCountry()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "priority"
-     */
-    public function testPropertyPriority()
+    public function testPropertyRequestedRegion()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

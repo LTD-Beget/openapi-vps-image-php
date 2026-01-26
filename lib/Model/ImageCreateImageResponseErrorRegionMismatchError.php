@@ -1,6 +1,6 @@
 <?php
 /**
- * ImageImageSourceLinkSource
+ * ImageCreateImageResponseErrorRegionMismatchError
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ use \ArrayAccess;
 use \OpenAPI\Client\ObjectSerializer;
 
 /**
- * ImageImageSourceLinkSource Class Doc Comment
+ * ImageCreateImageResponseErrorRegionMismatchError Class Doc Comment
  *
  * @category Class
  * @package  OpenAPI\Client
@@ -40,7 +40,7 @@ use \OpenAPI\Client\ObjectSerializer;
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSerializable
+class ImageCreateImageResponseErrorRegionMismatchError implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
       *
       * @var string
       */
-    protected static $openAPIModelName = 'Image_ImageSource_LinkSource';
+    protected static $openAPIModelName = 'Image_CreateImageResponse_Error_RegionMismatchError';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
       * @var string[]
       */
     protected static $openAPITypes = [
-        'link' => 'string'
+        'vps_region' => 'string',
+        'requested_region' => 'string'
     ];
 
     /**
@@ -68,7 +69,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'link' => null
+        'vps_region' => null,
+        'requested_region' => null
     ];
 
     /**
@@ -77,7 +79,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'link' => false
+        'vps_region' => false,
+		'requested_region' => false
     ];
 
     /**
@@ -166,7 +169,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $attributeMap = [
-        'link' => 'link'
+        'vps_region' => 'vps_region',
+        'requested_region' => 'requested_region'
     ];
 
     /**
@@ -175,7 +179,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $setters = [
-        'link' => 'setLink'
+        'vps_region' => 'setVpsRegion',
+        'requested_region' => 'setRequestedRegion'
     ];
 
     /**
@@ -184,7 +189,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
      * @var string[]
      */
     protected static $getters = [
-        'link' => 'getLink'
+        'vps_region' => 'getVpsRegion',
+        'requested_region' => 'getRequestedRegion'
     ];
 
     /**
@@ -244,7 +250,8 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('link', $data ?? [], null);
+        $this->setIfExists('vps_region', $data ?? [], null);
+        $this->setIfExists('requested_region', $data ?? [], null);
     }
 
     /**
@@ -290,28 +297,55 @@ class ImageImageSourceLinkSource implements ModelInterface, ArrayAccess, \JsonSe
 
 
     /**
-     * Gets link
+     * Gets vps_region
      *
      * @return string|null
      */
-    public function getLink()
+    public function getVpsRegion()
     {
-        return $this->container['link'];
+        return $this->container['vps_region'];
     }
 
     /**
-     * Sets link
+     * Sets vps_region
      *
-     * @param string|null $link link
+     * @param string|null $vps_region vps_region
      *
      * @return self
      */
-    public function setLink($link)
+    public function setVpsRegion($vps_region)
     {
-        if (is_null($link)) {
-            throw new \InvalidArgumentException('non-nullable link cannot be null');
+        if (is_null($vps_region)) {
+            throw new \InvalidArgumentException('non-nullable vps_region cannot be null');
         }
-        $this->container['link'] = $link;
+        $this->container['vps_region'] = $vps_region;
+
+        return $this;
+    }
+
+    /**
+     * Gets requested_region
+     *
+     * @return string|null
+     */
+    public function getRequestedRegion()
+    {
+        return $this->container['requested_region'];
+    }
+
+    /**
+     * Sets requested_region
+     *
+     * @param string|null $requested_region requested_region
+     *
+     * @return self
+     */
+    public function setRequestedRegion($requested_region)
+    {
+        if (is_null($requested_region)) {
+            throw new \InvalidArgumentException('non-nullable requested_region cannot be null');
+        }
+        $this->container['requested_region'] = $requested_region;
 
         return $this;
     }
